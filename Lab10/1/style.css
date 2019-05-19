@@ -1,0 +1,82 @@
+div{
+    margin:0 5px;
+    color:white;
+    font-family: Arial;
+    font-size:20px;
+    padding:0;
+    text-align: center;
+}
+.bordered_li li{
+    border: 1px solid blue;
+    max-width: 120px;
+}
+ul{
+    background-color: cornflowerblue;
+    border: 1px solid blue;
+    padding:0;
+    list-style: none;
+}
+li{
+    padding:10px;
+}
+li:hover{
+    color: cornflowerblue;
+    background-color:white;
+}
+.menu_a ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu_b ul{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+.menu_c ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu_d ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+.menu_e ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu_f ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu_g ul{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu_h ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.menu_i ul{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.menu_i ul li{
+    border:1px solid blue;
+    text-align: left;
+}
