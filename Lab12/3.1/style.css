@@ -1,0 +1,60 @@
+div{
+    width:650px;
+}
+ol{
+    list-style: none;
+    counter-reset: item;
+}
+li{
+    font-size:20px;
+}
+ol li{
+    counter-increment: item;
+}
+ol > li{
+    padding:0;
+    margin-bottom:8px;
+    display: table;
+}
+ol > li:before{
+    content: counters(item,".");
+    font-size:20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 35px;
+    padding:5px 0;
+    text-align: center;
+    margin-right: 20px;
+}
+li > p{
+    display: table-cell;
+    width:600px;
+}
+li ol{
+    padding-left:20px;
+}
+li ol li{
+    font-size:16px;
+    margin-bottom:6px;
+    padding-left:30px;
+    display: block;
+}
+li ol > li:before{
+    content: counters(item,".");
+    font-size:20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    margin-right: 20px;
+}
+.style_1:before{
+    border:2px solid yellow;
+    color:yellow;
+    background: green;
+}
+.style_2:before{
+    border:2px solid blue;
+    color:blue;
+    background: yellow;
+}

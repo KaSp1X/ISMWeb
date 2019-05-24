@@ -1,0 +1,182 @@
+body > div{
+    margin-bottom:15px;
+    border: 1px solid blue;
+    background: white;
+    color: blue;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.div1{
+    transition: background 1s ease-out;
+}
+.div1:hover {
+    background: blue;
+}
+
+.div2{
+    transition: all 1s ease-out;
+}
+.div2:hover {
+    color: white;
+    background: blue;
+}
+
+.div3{
+    transition: width 1s ease-out;
+}
+.div3:hover {
+    width: 50%;
+}
+
+.div4{
+    font-size: 15px;
+    transition: width 1s ease-out, font-size 1s ease-out;
+}
+.div4:hover{
+    width: 50%;
+    font-size: 40px;
+}
+
+.div5{
+    transition: width 1s ease-out 0.2s,  margin-left 1s ease-out 0.2s;
+}
+.div5:hover {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.div6{
+    text-indent: 4000px;
+    transition: text-indent 0.5s linear;
+    white-space: nowrap;
+}
+.div6:hover {
+    text-indent: 0px;
+}
+
+.div7{
+    transition: width 3s linear 3s;
+}
+.div7:hover{
+    width: 50%;
+}
+
+
+.div8 > input{
+    width: 35%;
+    height: 20%;
+    transition: all 1s ease-out;
+}
+.div8 > input:focus{
+    height: 40%;
+    width: 90%;
+    box-shadow: 5px 5px 5px blue;
+    color: blue;
+    outline: none;
+}
+
+.div9 > div, .div10 > div, .div11 > div, .div12 > div{
+     margin:5px;
+     width:30%;
+     height: 16px;
+     border:1px solid blue;
+     transition: all 1s ease-out;
+ }
+.div9:hover > div{
+    width: 90%;
+}
+
+.div10 > div:hover + div{
+    width: 90%;
+}
+
+.div11 > div:hover ~ div{
+    width: 90%;
+}
+
+.div12 > div:hover + div + div{
+    width: 90%;
+}
+
+.div13 > div{
+    width: 96%;
+    height: 40px;
+    line-height: 40px;
+    margin:5px;
+    border:1px solid blue;
+}
+.div13 > .tip{
+    margin-left:-500px;
+    transition: all 1s ease-out;
+    background-color: blue;
+    color:white;
+}
+.div13 > .hold:hover + .tip{
+    margin-left:5px;
+}
+
+.div14 > div{
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    margin:5px;
+    border:1px solid blue;
+}
+.div14 > div:first-child {
+    transition: width 3s steps(5, start);
+}
+.div14 > div:last-child{
+    transition: width 3s steps(5, end);
+}
+.div14:hover > div{
+    width:96%;
+}
+
+.div15{
+    transition: width 3s cubic-bezier(0.75,-1,0,0.75);
+}
+.div15:hover{
+    width:50%;
+}
+
+.div16 > div{
+    background-color:blue;
+    height: 100%;
+    width: 0%;
+    transition: all 3s linear;
+}
+.div16:hover > div{
+    width:100%;
+}
+
+.div17 > div{
+    background-color:blue;
+    height: 100%;
+    width: 0%;
+    transition: all 3s steps(5,start);
+}
+.div17:hover > div{
+    width:100%;
+}
+
+.div18{
+    width:500px;
+    height: 500px;
+}
+.div18 > div{
+    margin:166px auto;
+    width:33%;
+    height: 33%;
+    line-height: 166px;
+    font-size:35px;
+    border:1px solid blue;
+    transition: all 1s linear;
+    box-shadow: -166px 166px yellow, 166px -166px yellow;
+}
+.div18 > div:hover{
+    box-shadow: 166px 166px yellow, 166px 166px yellow;
+}
+

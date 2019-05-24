@@ -1,0 +1,46 @@
+div{
+    width:600px;
+}
+h1{
+    display:block;
+    width:auto;
+    color:red;
+    border-bottom:1px solid grey;
+    text-align: center;
+}
+ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+    width:600px;
+}
+.column:last-child li:first-child{
+    counter-increment: item+5;
+}
+li{
+    margin-top:5px;
+    font-size:20px;
+    counter-increment: item;
+    border-bottom:1px solid lightgray;
+}
+li:before{
+    content: counter(item);
+    font-size:25px;
+    display:inline-block;
+    margin-right: 20px;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    color:white;
+    background: cyan;
+    text-align: center;
+    line-height: 40px;
+    font-size:30px;
+}
+.column{
+    width:auto;
+    float:left;
+}
+.column:last-child{
+    margin-left:50px;
+}

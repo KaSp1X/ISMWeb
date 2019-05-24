@@ -1,0 +1,190 @@
+body > div{
+    margin-bottom:15px;
+    border: 1px solid blue;
+    background: white;
+    color: blue;
+    width: 300px;
+    height: 100px;
+}
+
+@keyframes div1_div2_anim {
+    from{margin-left:5px;}
+    to{margin-left:245px;}
+}
+@keyframes div3_anim {
+    from{background: white}
+    to{background: blue}
+}
+@keyframes div4_anim {
+    0%,100%{margin-left: 0px; margin-top: 0px;}
+    25%{margin-left: 175px; margin-top: 0px;}
+    50%{margin-left: 175px; margin-top: 175px;}
+    75%{margin-left: 0px; margin-top: 175px;}
+}
+@keyframes div5_anim {
+    0%,100%{margin-left: 0px; margin-top: 0px;background: white;}
+    25%{margin-left: 175px; margin-top: 0px;}
+    50%{margin-left: 175px; margin-top: 175px;background: blue;}
+    75%{margin-left: 0px; margin-top: 175px;}
+}
+@keyframes div6_anim {
+    0%, 100%{margin-left: 0%;}
+    50%{margin-left: 75%;}
+}
+@keyframes div7_anim {
+    from{margin-left: 0%;}
+    to{margin-left: 75%;}
+}
+@keyframes div8_div9_anim {
+    from{width: 0%;}
+    to{width:100%;}
+}
+@keyframes div10_div11_anim {
+    from{width:20%;}
+    to{width:96%;}
+}
+@keyframes div12_anim {
+    22%,48%,70%,85%,95%{
+        animation-timing-function: ease-out;
+        bottom: 0;
+    }
+    0%{
+        bottom: 90%;
+        left: 0%;
+        animation-timing-function: ease-in;
+    }
+    35%{
+        bottom: 40%;
+        animation-timing-function: ease-in;
+    }
+    59%{
+        bottom: 25%;
+        animation-timing-function: ease-in;
+    }
+    78%{
+        bottom: 12%;
+        animation-timing-function: ease-in;
+    }
+    90%{
+        bottom: 6%;
+        animation-timing-function: ease-in;
+    }
+    97%{
+        bottom: 3%;
+        animation-timing-function: ease-in;
+    }
+    100%{
+        left: 90%;
+        bottom: 0%;
+        animation-timing-function: ease-out;
+    }
+}
+
+.div1 > div, .div2 > div{
+    width: 50px;
+    height: 90px;
+    margin:5px;
+    border: 1px solid blue;
+}
+
+.div1 > div{
+    animation: div1_div2_anim 5s 3;
+}
+
+.div2 > div{
+    animation: div1_div2_anim 5s infinite;
+}
+
+.div3{
+    animation: div3_anim 3s 20 0s;
+}
+
+.div4, .div5{
+    width: 250px;
+    height: 250px;
+}
+.div4 > div{
+    background-color:blue;
+    width: 75px;
+    height: 75px;
+    animation:div4_anim 6s linear 10;
+}
+.div5 > div{
+    background-color:blue;
+    width: 75px;
+    height: 75px;
+    animation:div5_anim 6s linear infinite;
+}
+
+.div6 > div{
+    width: 25%;
+    height: 100%;
+    background-color:blue;
+    animation:div6_anim 3s infinite;
+}
+
+.div7 > div{
+    width: 25%;
+    height: 100%;
+    background-color:blue;
+    animation: div7_anim 3s infinite alternate;
+}
+
+.div8 > div{
+    height: 100%;
+    background-color:blue;
+    animation: div8_div9_anim 10s 1;
+}
+
+.div9 > div{
+    height: 100%;
+    background-color:blue;
+    animation: div8_div9_anim 5s infinite;
+}
+
+.div10 > div{
+    margin:2%;
+    background: blue;
+    height: 90%;
+    animation: div10_div11_anim 3s ease infinite alternate;
+    animation-play-state: paused;
+}
+
+.div10 > div:hover{
+    animation-play-state: running;
+}
+
+.div11{
+    height: 200px;
+}
+.div11 > div{
+    text-align: center;
+    line-height: 80px;
+    margin:2%;
+    border:1px solid blue;
+    height: 45%;
+}
+
+.div11 > .animated{
+    background: blue;
+    animation: div10_div11_anim 3s ease infinite alternate;
+    animation-play-state: paused;
+}
+
+.div11 > .hold:hover + .animated{
+    animation-play-state: running;
+}
+
+.div12{
+    width: 250px;
+    height: 250px;
+    position:relative;
+}
+.div12 > div{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color:blue;
+    position:absolute;
+    animation: div12_anim 5s infinite;
+}
